@@ -11,7 +11,7 @@
 
 ## MineVimrcFile
 
-[.vimrc](./.vimrc)
+[.vimrc](https://raw.githubusercontent.com/liarchgh/SoftwareBlog/master/vim/.vimrc)
 
 ```vimscript
 " Specify a directory for plugins
