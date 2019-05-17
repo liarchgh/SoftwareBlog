@@ -11,11 +11,9 @@
 
 ## MineVimrcFile
 
-{% file src="../.gitbook/assets/.vimrc.bin" %}
+[.vimrc](./.vimrc)
 
-{% code-tabs %}
-{% code-tabs-item title=".vimrc" %}
-```text
+```vimscript
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
