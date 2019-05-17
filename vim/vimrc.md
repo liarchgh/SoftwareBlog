@@ -2,7 +2,7 @@
 
 ## Where to create vimrc file
 
-### IdeaVim
+### [IdeaVim](https://www.jianshu.com/p/ec6b4b4536aa)
 
 | OS | Path |
 | :--- | :--- |
