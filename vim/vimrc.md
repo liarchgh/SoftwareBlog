@@ -13,7 +13,7 @@
 
 [.vimrc](https://raw.githubusercontent.com/liarchgh/SoftwareBlog/master/vim/.vimrc)
 
-```vimscript
+```text
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
@@ -662,10 +662,4 @@ function! CmdLine(str)
     unmenu Foo
 endfunction
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
-
-
-
 
