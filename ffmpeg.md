@@ -37,8 +37,22 @@
     ```
     # ffmpeg -i in.mkv -vf scale=width:height out.mkv
     ffmpeg -i in.mkv -vf scale=1280:720 out.mkv
+    ffmpeg -i in.mkv -vf scale=1280:720 out.mkv
     ```
     `width`,`height` 缩放后的高和宽，其中一项填为`-1`会保持比例缩放
+
+* [合并视频](https://www.jianshu.com/p/a9bccc12229b)
+
+    ```
+    file 'in0.mkv'
+    file 'in1.mkv'
+    file 'in2.mkv'
+    ```
+
+    ```
+    ffmpeg -f concat -i filelist.txt -c copy out.mkv
+    ```
+
 ## Refs
 
 [FFmpeg](https://ffmpeg.org/)
