@@ -42,16 +42,17 @@
     `width`,`height` 缩放后的高和宽，其中一项填为`-1`会保持比例缩放
 
 * [合并视频](https://www.jianshu.com/p/a9bccc12229b)
+    1. 将要合并的视频写到文件`filelise.txt`中
 
-    ```
-    file 'in0.mkv'
-    file 'in1.mkv'
-    file 'in2.mkv'
-    ```
-
-    ```
-    ffmpeg -f concat -i filelist.txt -c copy out.mkv
-    ```
+        ```
+        file 'in0.mkv'
+        file 'in1.mkv'
+        file 'in2.mkv'
+        ```
+    1. 
+        ```
+        ffmpeg -f concat -i filelist.txt -c copy out.mkv
+        ```
 
 ## Refs
 
