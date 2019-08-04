@@ -67,6 +67,12 @@
     ffmpeg -i .\out1.mkv -i .\out.mp4 -i .\out.mkv -filter_complex '[0:0] [0:1] [1:0] [1:1] [2:0] [2:1] concat=n=3:v=1:a=1 [v] [a]' -map '[v]' -map '[a]' connectWithContact.mkv
     ```
 
+* [内嵌字幕](https://www.cnblogs.com/tocy/p/ffmpeg-basic-learning-3.html#subtitles-video-filter%E5%86%85%E5%B5%8C%E5%AD%97%E5%B9%95%E6%B5%81)
+    
+    ```
+    ffmpeg -i in.mkv -vf subtitles=titles.srt out.mkv
+    ```
+
 ## Refs
 
 [FFmpeg](https://ffmpeg.org/)
