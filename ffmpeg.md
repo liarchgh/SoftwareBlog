@@ -41,18 +41,31 @@
     ```
     `width`,`height` 缩放后的高和宽，其中一项填为`-1`会保持比例缩放
 
-* [合并视频](https://www.jianshu.com/p/a9bccc12229b)
-    1. 将要合并的视频写到文件`filelise.txt`中
+    可以和裁剪一起使用：
+    ```
+    ffmpeg -i in.mkv -strict -2 -vf scale=853:480,crop=480:480:186:0 out.mkv
+    ```
 
-        ```
-        file 'in0.mkv'
-        file 'in1.mkv'
-        file 'in2.mkv'
-        ```
-    1. 
-        ```
-        ffmpeg -f concat -i filelist.txt -c copy out.mkv
-        ```
+* [合并视频](https://www.jianshu.com/p/a9bccc12229b)
+    有多种方法：
+    1. FFmpeg concat 分离器  
+        步骤：
+        1. 将要合并的视频写到文件`filelise.txt`中
+
+            ```
+            file 'in0.mkv'
+            file 'in1.mkv'
+            file 'in2.mkv'
+            ```
+        1. 
+            ```
+            ffmpeg -f concat -i filelist.txt -c copy out.mkv
+            ```
+    
+    1. 使用 FFmpeg concat 过滤器重新编码（有损）
+    ```
+    ffmpeg -i .\out1.mkv -i .\out.mp4 -i .\out.mkv -filter_complex '[0:0] [0:1] [1:0] [1:1] [2:0] [2:1] concat=n=3:v=1:a=1 [v] [a]' -map '[v]' -map '[a]' connectWithContact.mkv
+    ```
 
 ## Refs
 
