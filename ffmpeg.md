@@ -73,6 +73,19 @@
     ffmpeg -i in.mkv -vf subtitles=titles.srt out.mkv
     ```
 
+* [比特率设置](https://blog.csdn.net/rootusers/article/details/41646557#t2)
+    
+    ```
+    ffmpeg -i in.mkv -b 1.5M out.mkv
+    ffmpeg -i in.mkv -b:v 1500K out.mkv
+    ```
+
+* [最大输出文件设置](https://blog.csdn.net/rootusers/article/details/41646557#t2)
+    
+    ```
+    ffmpeg -i in.mkv -fs 10MB out.mkv
+    ```
+
 ## Refs
 
 [FFmpeg](https://ffmpeg.org/)
