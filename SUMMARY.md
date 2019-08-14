@@ -2,6 +2,7 @@
 
 * [Home](README.md)
 * [FFmpeg](ffmpeg.md)
+* [VSCode](vscode.md)
 
 ## Vim
 
